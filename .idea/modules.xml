@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Marvel.iml" filepath="$PROJECT_DIR$/.idea/modules/Marvel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Marvel.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Marvel.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Marvel.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/Marvel.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/business/Marvel.business.iml" filepath="$PROJECT_DIR$/.idea/modules/business/Marvel.business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/dtos/Marvel.dtos.iml" filepath="$PROJECT_DIR$/.idea/modules/dtos/Marvel.dtos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mainLibrary/Marvel.mainLibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/mainLibrary/Marvel.mainLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/marvelCore/Marvel.marvelCore.iml" filepath="$PROJECT_DIR$/.idea/modules/marvelCore/Marvel.marvelCore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/marvelRepository/Marvel.marvelRepository.iml" filepath="$PROJECT_DIR$/.idea/modules/marvelRepository/Marvel.marvelRepository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/network/Marvel.network.iml" filepath="$PROJECT_DIR$/.idea/modules/network/Marvel.network.iml" />
+    </modules>
+  </component>
+</project>

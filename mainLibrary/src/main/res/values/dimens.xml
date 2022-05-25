@@ -1,0 +1,184 @@
+<resources>
+    <!--    Padding started-->
+    <dimen name="padding_smSm">@dimen/_2sdp</dimen>
+    <dimen name="padding_sm">@dimen/_4sdp</dimen>
+    <dimen name="padding_smMd">@dimen/_6sdp</dimen>
+    <dimen name="padding_Md">@dimen/_8sdp</dimen>
+    <dimen name="padding_MdX">@dimen/_12sdp</dimen>
+    <dimen name="padding_Lg">@dimen/_16sdp</dimen>
+    <dimen name="padding_LgX">@dimen/_24sdp</dimen>
+    <!--    <dimen name="padding_MdX"-->
+
+    <!--    Margin started-->
+    <dimen name="margin_sm">@dimen/_4sdp</dimen>
+    <dimen name="margin_smMd">@dimen/_6sdp</dimen>
+    <dimen name="margin_Md">@dimen/_8sdp</dimen>
+    <dimen name="margin_MdX">@dimen/_12sdp</dimen>
+    <dimen name="margin_Lg">@dimen/_16sdp</dimen>
+    <dimen name="margin_LgX">@dimen/_24sdp</dimen>
+    <dimen name="margin_LgXX">@dimen/_32sdp</dimen>
+    <!--    <dimen name="padding_MdX"-->
+
+    <!--    Elevation started-->
+    <dimen name="elevation_smX">@dimen/_2sdp</dimen>
+    <dimen name="elevation_sm">@dimen/_4sdp</dimen>
+    <dimen name="elevation_smMd">@dimen/_6sdp</dimen>
+    <dimen name="elevation_Md">@dimen/_8sdp</dimen>
+    <dimen name="elevation_Lg">@dimen/_16sdp</dimen>
+    <!--    <dimen name="padding_MdX"-->
+
+    <!--    Radius started-->
+    <dimen name="radius_sm">@dimen/_4sdp</dimen>
+    <dimen name="radius_smMd">@dimen/_6sdp</dimen>
+    <dimen name="radius_Md">@dimen/_8sdp</dimen>
+    <dimen name="radius_MdX">@dimen/_12sdp</dimen>
+    <dimen name="radius_Lg">@dimen/_16sdp</dimen>
+    <dimen name="radius_LgX">@dimen/_24sdp</dimen>
+
+    <!--    Button started-->
+    <dimen name="btn_small_height">@dimen/_28sdp</dimen>
+    <dimen name="btn_normal_height">@dimen/_36sdp</dimen>
+
+    <!--    EditText-->
+    <dimen name="layout_text_view_height">@dimen/_36sdp</dimen>
+
+
+    <!--    Icons -->
+    <dimen name="icon_width_xxsm">@dimen/_16sdp</dimen>
+    <dimen name="icon_height_xxsm">@dimen/_16sdp</dimen>
+
+    <dimen name="icon_width_xsm">@dimen/_24sdp</dimen>
+    <dimen name="icon_height_xsm">@dimen/_24sdp</dimen>
+
+    <dimen name="icon_width_sm">@dimen/_36sdp</dimen>
+    <dimen name="icon_height_sm">@dimen/_36sdp</dimen>
+
+    <dimen name="icon_width">@dimen/_48sdp</dimen>
+    <dimen name="icon_height">@dimen/_48sdp</dimen>
+
+    <dimen name="separator">@dimen/_1sdp</dimen>
+    <!--    <dimen name="separator_sm">@dimen/_1sdp</dimen>-->
+
+    <dimen name="card_elevation_medium">4dp</dimen>
+    <dimen name="card_radius_default">12dp</dimen>
+
+
+    <!--  New Dimensions -->
+    <dimen name="zero">0dp</dimen>
+    <dimen name="one">1dp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_normal">18sp</dimen>
+    <dimen name="text_size_large">24sp</dimen>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="text_5">5dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="margin_6">6dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_24_sp">24sp</dimen>
+    <dimen name="margin_22">22dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="text_large">18sp</dimen>
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="logo">180dp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_30sp">30sp</dimen>
+    <dimen name="txt_40">40dp</dimen>
+    <dimen name="margin_150">170dp</dimen>
+
+    <!--General-->
+    <dimen name="text_10">10sp</dimen>
+    <dimen name="text_12">12sp</dimen>
+    <dimen name="text_15">15sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+    <dimen name="text_25">25sp</dimen>
+    <dimen name="text_30">30sp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_8">6dp</dimen>
+    <dimen name="margin_70">70dp</dimen>
+    <dimen name="margin_60">60dp</dimen>
+    <dimen name="margin_40">40dp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="margin_55">55dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_80">80dp</dimen>
+    <dimen name="margin_100">100dp</dimen>
+    <dimen name="margin_130">140dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_0">0dp</dimen>
+
+    <dimen name="margin_300">315dp</dimen>
+    <dimen name="margin_350">350dp</dimen>
+
+    <dimen name="margin_1">1dp</dimen>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="button_round">5dp</dimen>
+    <dimen name="button_3">3dp</dimen>
+    <!--UI Constant-->
+    <dimen name="margin_login">30dp</dimen>
+
+    <!--Text Dimension-->
+    <dimen name="text">14sp</dimen>
+    <dimen name="textExLarge">24sp</dimen>
+    <dimen name="icon_loader">60dp</dimen>
+    <dimen name="radius">8dp</dimen>
+    <dimen name="vertical_spacing">20dp</dimen>
+    <dimen name="divider">1dp</dimen>
+    <dimen name="btn_width">160dp</dimen>
+    <dimen name="menu_height">180dp</dimen>
+    <dimen name="attachment_hw">90dp</dimen>
+    <dimen name="nav_drawer_width">350dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">225dp</dimen>
+
+    <dimen name="drawer_height">146dp</dimen>
+    <dimen name="drawer_height1">168dp</dimen>
+
+    <dimen name="text_ipv">20sp</dimen>
+    <dimen name="text_ipv_large">30sp</dimen>
+
+    <dimen name="wheel_logo_size">125dp</dimen>
+    <dimen name="detail_page_wheel_logo_size">225dp</dimen>
+    <dimen name="ats_logo_w">100dp</dimen>
+    <dimen name="ats_logo_h">160dp</dimen>
+    <dimen name="ats_text_w">200dp</dimen>
+    <dimen name="ats_text_h">100dp</dimen>
+    <dimen name="progress_circle_h_w">70dp</dimen>
+    <dimen name="fab_w_h">56dp</dimen>
+    <dimen name="margin_from_fab">96dp</dimen>
+    <dimen name="margin_for_view_on_left_fab_w_h">76dp</dimen>
+    <dimen name="tab_menu_icon_hw">18dp</dimen>
+    <dimen name="ats_logo_size">80dp</dimen>
+    <dimen name="login_page_wheel_w">700dp</dimen>
+    <dimen name="login_page_wheel_h">500dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="top_corner_logow">80dp</dimen>
+    <dimen name="top_corner_logoh">70dp</dimen>
+    <dimen name="done_btn_hw">60dp</dimen>
+    <dimen name="success_dialog_minw">350dp</dimen>
+    <dimen name="bottom_btn_margin">10dp</dimen>
+
+    <item name="login_guildeline_top_percent" format="float" type="dimen">0.15</item>
+
+
+    <dimen name="submit_btn_min_heigh">10dp</dimen>
+    <dimen name="screen_title_marin_top">10dp</dimen>
+    <dimen name="ticketTypeCardHeight">@dimen/_74sdp</dimen>
+
+    <dimen name="imageWidth_md_x">@dimen/_64sdp</dimen>
+    <dimen name="imageHeight_md_x">@dimen/_64sdp</dimen>
+
+
+    <dimen name="progress_wheel_width">@dimen/_64sdp</dimen>
+    <dimen name="progress_wheel_height">@dimen/_64sdp</dimen>
+
+
+
+</resources>

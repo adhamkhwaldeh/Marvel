@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Base colors-->
+    <color name="colorPrimary">#095899</color>
+    <color name="colorPrimaryDark">#095899</color>
+    <color name="colorAccent">#0e7ab9</color>
+
+    <color name="separatorColor">#44d4d4d4</color>
+
+    <color name="aa">#FFA4D2D8</color>
+    <color name="colorPrimary_trans">#8A002E6C</color>
+    <color name="colorPrimary_light_trans">#AE006BF8</color>
+    <color name="colorPrimary_min_light_trans">#85006EFF</color>
+    <color name="primaryTextColor">#0453BD</color>
+
+
+    <color name="bootstrapSuccess">#28a745</color>
+    <color name="bootstrapDanger">#dc3545</color>
+
+    <color name="attendancePlus">#8ac253</color>
+    <color name="attendanceMinus">#fd6a6a</color>
+
+    <color name="viewed">#c6BBB5</color>
+    <color name="unviewd">#000</color>
+
+    <color name="adp_grey">#adafb1</color>
+    <color name="adp_dark_brown">#392e2c</color>
+    <color name="adp_brown">#756660</color>
+    <color name="adp_med_brown">#988b86</color>
+    <color name="adp_light_brown">#c6BBB5</color>
+    <color name="adp_light_brown_trans">#97C6BBB5</color>
+
+    <color name="colorSecondary">#a39161</color>
+    <color name="colorSecondaryMedium">#B19D6A</color>
+    <color name="colorSecondaryLight">#DAC181</color>
+    <color name="colorSecondaryLight_trans_">#9EB19D6A</color>
+    <color name="colorTextPrimary">#1D1C1C</color>
+    <color name="colorTextSecondary">#7f1a18</color>
+    <color name="translucentBackground">#66DADADA</color>
+    <color name="confirmcolor">#009688</color>
+
+    <color name="test">#70C9BA95</color>
+
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="intilizeTextColor">#7B633E</color>
+    <color name="secondaryTextColor">#A0A0A0</color>
+    <color name="background">#ECECEE</color>
+    <color name="gree">#09861e</color>
+    <color name="orange">#F7C244</color>
+    <color name="yellow">#CDD004</color>
+    <color name="white">#FFFFFF</color>
+    <color name="trans_white">#74FFFFFF</color>
+    <color name="highlightedRow">#FCF6E2</color>
+    <color name="closed">#20682F</color>
+    <color name="open">#891e04</color>
+    <color name="splashBg">#EFEFEF</color>
+    <color name="darker_card_background">#123742</color><!--7d99c1-->
+    <color name="colorBlue">#3F51B5</color>
+    <!--    <color name="colorPrimaryDark">#303F9F</color>-->
+    <color name="black">#000000</color>
+    <color name="arc_background">#FFFF8800</color>
+    <color name="button_text_color">#F1F1F3</color>
+    <color name="green">#075e54</color>
+    <color name="card_background_new">#99ebe5e0</color>
+    <color name="card_background">#d7cec8</color> <!--7d99c1-->
+    <color name="card_bg">#FF0021</color>
+    <color name="transBlack">#7f000000</color>
+    <color name="view_bg">#0B5383</color>
+    <color name="main_layout_background">#5E5E5E</color>
+
+    <color name="transperent_color">#00000000</color>
+    <color name="grey_color">#999999</color>
+    <color name="min_grey_color">#66C3C3C3</color>
+    <color name="dark_min_grey_color">#81C3C3C3</color>
+    <color name="light_min_grey_color">#B4EFEFEF</color>
+    <color name="trans_grey_color">#AE999999</color>
+
+    <color name="header_color">#A97E3A</color>
+    <color name="snack_bar_success_color">#009688</color>
+    <color name="snack_bar_error_color">#EA083F</color>
+    <color name="ta_text_color">#FFFF2B22</color>
+    <color name="trans_light_grey_color">#4DAAAAAA</color>
+
+    <color name="home">#f4ab29</color>
+    <color name="clock">#5538b0</color>
+    <color name="folder">#a9418f</color>
+    <color name="menu">#4290a3</color>
+
+
+    <!--    Rwanda smart officer colors-->
+
+    <color name="curious_blue">#1695D1</color>
+    <color name="venice_blue">#095899</color>
+    <color name="bahama_blue">#0A60A0</color>
+    <color name="martini">#999999</color>
+    <color name="black_alpha_10">#19000000</color>
+    <color name="gray">#898989</color>
+    <color name="lochmara">#0E7AB9</color>
+    <color name="jet_stream_alpha_60">#99B7D1C8</color>
+    <color name="bright_sun">#FFC849</color>
+
+    <color name="link_water">#EDF2F8</color>
+    <color name="onahau">#CEF1FF</color>
+    <color name="mercury">#E6E6E6</color>
+    <color name="oyster_bay">#D9FCFF</color>
+    <color name="congress_blue">#0D4C8D</color>
+    <color name="salem">#0B853A</color>
+    <color name="white_alpha_50">#80FFFFFF</color>
+    <color name="stack">#898E88</color>
+    <color name="gray_nurse">#E3E5E2</color>
+    <color name="mine_shaft">#222222</color>
+    <color name="geyser_alpha_80">#CCD7DEDE</color>
+    <color name="mine_shaft_1">#464646</color>
+    <color name="ebb">#EFEAEA</color>
+    <color name="torch_red_alpha_100">#FFFF003E</color>
+    <color name="denim_alpha_51">#811475C5</color>
+    <color name="bright_sun_alpha_23">#3BFFC849</color>
+    <color name="mercury_alpha_40">#66E4E4E4</color>
+    <color name="scarlet_alpha_59">#97E81515</color>
+    <color name="glacier">#7BB6D8</color>
+    <color name="downriver">#0B2D51</color>
+    <color name="chelsea_cucumber_alpha_24">#3D8AC253</color>
+    <color name="scarlet_alpha_59asd">#6DE81515</color>
+
+
+    <color name="icon_color">@color/gray</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="male">#1AA3FF</color>
+    <color name="female">#EC48A6</color>
+
+</resources>

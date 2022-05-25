@@ -1,0 +1,75 @@
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            android {
+                compileSdkVersion(AppConfig.targetSdk)
+
+                defaultConfig {
+                    minSdkVersion(AppConfig.minSdk)
+                    targetSdkVersion(AppConfig.targetSdk)
+                    testInstrumentationRunner(AppConfig.androidTestInstrumentation)
+                    vectorDrawables.useSupportLibrary true
+                    multiDexEnabled true
+                }
+
+                signingConfigs {
+                    debug {
+//                        storeFile file("debug.keystore")
+//                        keyAlias 'androiddebugkey'
+//                        keyPassword 'android'
+//                        storePassword 'android'
+                    }
+
+
+                }
+
+                buildTypes {
+                    production {
+
+                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        resValue "string", "application_name", "Run GoRest Production"
+                        signingConfig signingConfigs.debug
+                        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                    }
+
+                    development {
+
+                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        resValue "string", "application_name", "Run GoRest Development"
+                        signingConfig signingConfigs.debug
+
+                    }
+
+                    release {
+
+                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        resValue "string", "application_name", "Run GoRest "
+                        signingConfig signingConfigs.debug
+                        proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+                    }
+
+                    debug {
+
+                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        resValue "string", "application_name", "Run GoRest debug"
+                    }
+                }
+
+                viewBinding {
+                    android.buildFeatures.viewBinding = true
+                    android.buildFeatures.dataBinding = true
+                }
+
+                kapt {
+                    correctErrorTypes = true
+                }
+
+                kotlinOptions {
+                    jvmTarget = '1.8'
+                }
+
+            }
+
+        }
+    }
+}
