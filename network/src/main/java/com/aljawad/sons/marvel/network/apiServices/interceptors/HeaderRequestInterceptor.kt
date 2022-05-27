@@ -1,17 +1,12 @@
 package com.aljawad.sons.marvel.network.apiServices.interceptors
 
 
-import android.content.Context
-import dagger.hilt.android.qualifiers.ApplicationContext
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
 import okhttp3.Headers.Companion.toHeaders
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
 import java.io.IOException
 import javax.inject.Inject
-import kotlin.coroutines.coroutineContext
 import kotlin.jvm.Throws
 
 

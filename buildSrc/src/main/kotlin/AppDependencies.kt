@@ -80,8 +80,8 @@ object AppDependencies {
 
     //region Dagger Hilt
     private const val hiltAndroid = "com.google.dagger:hilt-android:${Versions.daggerHiltAndroid}"
-    private const val hiltLifecycleViewModel =
-        "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.daggerHilt}"
+//    private const val hiltLifecycleViewModel =
+//        "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.daggerHilt}"
     private const val hiltWork = "androidx.hilt:hilt-work:${Versions.daggerHilt}"
     private const val hiltNavigationFragment =
         "androidx.hilt:hilt-navigation-fragment:${Versions.daggerHilt}"
@@ -176,7 +176,7 @@ object AppDependencies {
 
     val hiltLibrary = arrayListOf<String>().apply {
         add(hiltAndroid)
-        add(hiltLifecycleViewModel)
+//        add(hiltLifecycle ViewModel)
         add(hiltWork)
         add(hiltNavigationFragment)
         add(hiltCommon)

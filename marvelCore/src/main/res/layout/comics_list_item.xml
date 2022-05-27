@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.aljawad.sons.marvel.dtos.models.ComicModel" />
+    </data>
+
+    <!--    style="@style/CornerCardView"-->
+    <!--    app:cardBackgroundColor="@color/white"-->
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/genderImageView"-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="80dp"-->
+<!--                app:characterImage="@{item}"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:id="@+id/nameContainer"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintStart_toStartOf="parent"-->
+            <!--                app:layout_constraintTop_toTopOf="parent">-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/nameTextView"-->
+<!--                style="@style/Theme.GoRest.TitleText"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="1"-->
+<!--                android:text="@{item.name}"-->
+<!--                android:textStyle="normal"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:text="Total working hour 08 :20" />-->
+
+            <!--                &lt;!&ndash;                    android:background="@android:drawable/presence_online"&ndash;&gt;-->
+
+            <!--                <View-->
+            <!--                    android:id="@+id/statusTextView"-->
+            <!--                    style="@style/Theme.GoRest.NormalText"-->
+            <!--                    android:layout_width="16dp"-->
+            <!--                    android:layout_height="16dp"-->
+            <!--                    android:background="@android:drawable/presence_offline"-->
+            <!--                    android:ellipsize="end"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:textStyle="normal"-->
+            <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:userStatus="@{item.status}"-->
+            <!--                    tools:text="Total working hour 08 :20" />-->
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+            <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/nameContainer">-->
+
+            <!--                <androidx.appcompat.widget.AppCompatTextView-->
+            <!--                    android:id="@+id/emailTextView"-->
+            <!--                    style="@style/Theme.GoRest.NormalText"-->
+            <!--                    android:layout_width="0dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:ellipsize="end"-->
+            <!--                    android:maxLines="1"-->
+            <!--                    android:text="@{item.email}"-->
+            <!--                    android:textStyle="normal"-->
+            <!--                    app:layout_constraintEnd_toStartOf="@+id/genderImageView"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    tools:text="example@gmail.com" />-->
+
+
+            <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

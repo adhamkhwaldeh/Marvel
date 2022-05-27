@@ -7,11 +7,16 @@ plugins {
 
 dependencies {
     implementation(AppDependencies.appLibraries)
-    implementation(project(":dtos"))
+    implementation(AppDependencies.pagingLibrary)
+    implementation(AppDependencies.retrofitLibraries)
 
     //region Dagger Hilt
     implementation(AppDependencies.hiltLibrary)
     kapt(AppDependencies.hilAndroidCompiler)
     kapt(AppDependencies.hilCompiler)
     //endregion
+
+    implementation(project(":dtos"))
+    implementation(project(":network"))
+    implementation(project(":mainLibrary"))
 }

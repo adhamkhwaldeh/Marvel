@@ -26,7 +26,10 @@ subprojects {
                 buildTypes {
                     production {
 
-                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        buildConfigField "String", "END_POINT", '"https://gateway.marvel.com:443/"'
+                        buildConfigField "String", "PUBLIC_KEY", '"86044696e854d4c8c606dd5ef5d447d1"'
+                        buildConfigField "String", "PRIVATE_KEY", '"c4e023b0a382a14369f97ffe434c7f55106e981e"'
+
                         resValue "string", "application_name", "Run GoRest Production"
                         signingConfig signingConfigs.debug
                         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -34,7 +37,10 @@ subprojects {
 
                     development {
 
-                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        buildConfigField "String", "END_POINT", '"https://gateway.marvel.com:443/"'
+                        buildConfigField "String", "PUBLIC_KEY", '"86044696e854d4c8c606dd5ef5d447d1"'
+                        buildConfigField "String", "PRIVATE_KEY", '"c4e023b0a382a14369f97ffe434c7f55106e981e"'
+
                         resValue "string", "application_name", "Run GoRest Development"
                         signingConfig signingConfigs.debug
 
@@ -42,7 +48,10 @@ subprojects {
 
                     release {
 
-                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        buildConfigField "String", "END_POINT", '"https://gateway.marvel.com:443/"'
+                        buildConfigField "String", "PUBLIC_KEY", '"86044696e854d4c8c606dd5ef5d447d1"'
+                        buildConfigField "String", "PRIVATE_KEY", '"c4e023b0a382a14369f97ffe434c7f55106e981e"'
+
                         resValue "string", "application_name", "Run GoRest "
                         signingConfig signingConfigs.debug
                         proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
@@ -50,7 +59,10 @@ subprojects {
 
                     debug {
 
-                        buildConfigField "String", "END_POINT", '"https://gorest.co.in/public/v1/"'
+                        buildConfigField "String", "END_POINT", '"https://gateway.marvel.com:443/"'
+                        buildConfigField "String", "PUBLIC_KEY", '"86044696e854d4c8c606dd5ef5d447d1"'
+                        buildConfigField "String", "PRIVATE_KEY", '"c4e023b0a382a14369f97ffe434c7f55106e981e"'
+
                         resValue "string", "application_name", "Run GoRest debug"
                     }
                 }

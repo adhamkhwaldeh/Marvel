@@ -109,9 +109,11 @@ android {
 //        exclude("META-INF/*.kotlin_module")
 //        exclude("project.properties")
 //        exclude("META-INF/INDEX.LIST")
+//        exclude("META-INF/kotlin-stdlib-common.kotlin_module")
 //        exclude("META-INF/gradle/incremental.annotation.processors")
 ////        resources.excludes.add("META-INF/*")
 //    }
+
 }
 
 dependencies {

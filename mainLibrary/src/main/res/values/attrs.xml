@@ -14,4 +14,16 @@
         <attr name="matProg_linearProgress" format="boolean" />
     </declare-styleable>
 
+    <declare-styleable name="StatesLayoutView">
+        <attr name="WaitingLayout" format="reference" />
+        <attr name="NoDataLayout" format="reference" />
+        <attr name="NoConnectionLayout" format="reference" />
+        <attr name="SuccessLayout" format="reference" />
+        <attr name="NoPermissionLayout" format="reference" />
+        <attr name="InternalServerErrorLayout" format="reference" />
+        <attr name="RefreshBtnRes" format="reference" />
+        <attr name="PermissionBtnRes" format="reference" />
+        <attr name="InternalServerErrorBtnRes" format="reference" />
+    </declare-styleable>
+
 </resources>

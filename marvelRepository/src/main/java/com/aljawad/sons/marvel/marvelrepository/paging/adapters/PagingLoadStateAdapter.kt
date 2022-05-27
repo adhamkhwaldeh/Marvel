@@ -7,8 +7,8 @@ import androidx.paging.LoadState
 import androidx.paging.LoadStateAdapter
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.aljawad.sons.gorestrepository.R
-import com.aljawad.sons.gorestrepository.databinding.ItemNetworkStateBinding
+import com.aljawad.sons.marvel.marvelrepository.R
+import com.aljawad.sons.marvel.marvelrepository.databinding.ItemNetworkStateBinding
 
 class PagingLoadStateAdapter<T : Any, VH : RecyclerView.ViewHolder>(
     private val adapter: PagingDataAdapter<T, VH>

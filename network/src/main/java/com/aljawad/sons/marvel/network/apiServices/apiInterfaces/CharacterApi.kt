@@ -1,17 +1,30 @@
 package com.aljawad.sons.marvel.network.apiServices.apiInterfaces
 
 
-import com.aljawad.sons.dtos.models.UserModel
-import com.aljawad.sons.dtos.response.UserListResponse
-import retrofit2.Response
+import com.aljawad.sons.marvel.dtos.models.CharacterModel
+import com.aljawad.sons.marvel.dtos.models.ComicModel
+import com.aljawad.sons.marvel.dtos.responses.DataContainerModel
+import com.aljawad.sons.marvel.dtos.responses.DataWrapperModel
 import retrofit2.http.*
 
 interface CharacterApi {
 
-    @GET("users")
-    suspend fun getCharacterList(@Query("page") page: Int): UserListResponse
+    @GET("v1/public/characters")
+    suspend fun getCharacterList(
+        @Query("ts") ts: Long,
+        @Query("apikey") apikey: String,
+        @Query("hash") hash: String,
+        @Query("offset") offset: Int,
+        @Query("limit") limit: Int,
+    ): DataWrapperModel<DataContainerModel<MutableList<CharacterModel>>>
 
     @GET("v1/public/characters/{characterId}/comics")
-    suspend fun getCharacterComicList(@Query("characterId") characterId: Int): UserListResponse
+    suspend fun getCharacterComicList(
+        @Path("characterId") characterId: Int,
+        @Query("ts") ts: Long,
+        @Query("apikey") apikey: String,
+        @Query("hash") hash: String,
+    ): DataWrapperModel<DataContainerModel<MutableList<ComicModel>>>
+
 
 }

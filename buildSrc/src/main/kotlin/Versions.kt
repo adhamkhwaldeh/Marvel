@@ -2,7 +2,7 @@
 object Versions {
     //app level
     const val gradle = "7.0.0-alpha03"
-    const val kotlin = "1.4.32"
+    const val kotlin = "1.5.31"// "1.4.32"
     const val nav_version = "2.3.4"
 
     //libs
@@ -24,7 +24,7 @@ object Versions {
     const val paging = "3.1.0"
 
     const val daggerHiltAndroid = "2.42" //"2.38.1"//"2.31-alpha"
-    const val daggerHilt = "1.0.0" //"1.0.0-alpha03"
+    const val daggerHilt = "1.0.0-alpha03"// "1.0.0"
 
 
     //test
