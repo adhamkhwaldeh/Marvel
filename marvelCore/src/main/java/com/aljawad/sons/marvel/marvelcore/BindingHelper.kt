@@ -8,22 +8,22 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.DrawableCompat
 import androidx.databinding.BindingAdapter
 
-import com.aljawad.sons.mainlibrary.R
 import com.aljawad.sons.marvel.dtos.models.CharacterModel
+import com.aljawad.sons.marvel.dtos.models.ImageModel
 import com.bumptech.glide.Glide
 
 object BindingHelper {
 
     @JvmStatic
     @BindingAdapter("characterImage")
-    fun characterImage(imageView: ImageView?, character: CharacterModel?) {
+    fun characterImage(imageView: ImageView?, thumbnail: ImageModel?) {
         try {
             imageView?.let {
                 Glide
                     .with(imageView.context)
-                    .load(character?.thumbnail?.fullPath())
+                    .load(thumbnail?.fullPath())
                     .centerCrop()
-//                    .placeholder(R.drawable.loading_spinner)
+                    .placeholder(R.drawable.rotate)
                     .into(imageView);
             }
         } catch (ex: Exception) {

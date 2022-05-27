@@ -74,16 +74,20 @@ class CharacterViewModel @Inject constructor(
 
     //region Character Comics
 
+    var selectedCharacterId: Int? = null
+
     private lateinit var _characterComicsFlow: Flow<BaseState<DataWrapperModel<DataContainerModel<MutableList<ComicModel>>>>>
     val characterComicsFlow: Flow<BaseState<DataWrapperModel<DataContainerModel<MutableList<ComicModel>>>>>
         get() = _characterComicsFlow
 
-    fun loadCharacterComics(characterId: Int) { //: Flow<BaseState>
+    fun loadCharacterComics(characterId: Int, collectCallback: () -> Unit) {
+        selectedCharacterId = characterId
         viewModelScope.launch {
             CoroutineScope(Dispatchers.IO)
                 .launch {
-                    _characterComicsFlow =
-                        characterComicsUseCase(characterId)//.map { poKo -> poKo }
+                    _characterComicsFlow = characterComicsUseCase(characterId)
+                    collectCallback.invoke()
+                    //.map { poKo -> poKo }
                 }
         }
     }

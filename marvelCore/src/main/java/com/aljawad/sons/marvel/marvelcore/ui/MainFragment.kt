@@ -6,17 +6,24 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.paging.LoadState
+import com.aljawad.sons.mainlibrary.enums.LayoutStatesEnum
 import com.aljawad.sons.mainlibrary.extensions.launchOnLifecycleScope
 import com.aljawad.sons.mainlibrary.extensions.observe
+import com.aljawad.sons.mainlibrary.interfaces.OnRefreshLayoutListener
+import com.aljawad.sons.mainlibrary.states.BaseState
+import com.aljawad.sons.mainlibrary.states.PoJoByIdStateLoadedSuccessfully
 import com.aljawad.sons.marvel.marvelcore.R
 import com.aljawad.sons.marvel.marvelcore.adapters.CharacterPagingAdapter
+import com.aljawad.sons.marvel.marvelcore.adapters.ComicsAdapter
 import com.aljawad.sons.marvel.marvelcore.databinding.FragmentMainBinding
 import com.aljawad.sons.marvel.marvelcore.viewModels.CharacterViewModel
 import com.aljawad.sons.marvel.marvelrepository.paging.adapters.PagingLoadStateAdapter
+import com.aljawad.sons.marvel.marvelrepository.paging.adapters.PagingLoadStateHorizontalAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
@@ -29,13 +36,23 @@ import kotlinx.coroutines.flow.filter
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 
-    private val viewModel: CharacterViewModel by viewModels()
+    private val viewModel: CharacterViewModel by activityViewModels()
 
     private val characterAdapter: CharacterPagingAdapter by lazy {
         CharacterPagingAdapter(
             onCharacterClick = {
-                viewModel.loadCharacterComics(it.id)
-                collectCharacterComics()
+                viewModel.loadCharacterComics(it.id) {
+                    collectCharacterComics()
+                }
+            }
+        )
+    }
+
+    private val comicsAdapter: ComicsAdapter by lazy {
+        ComicsAdapter(
+//            onCharacterClick = {
+//                viewModel.loadCharacterComics(it.id)
+//                collectCharacterComics()
 
 //                MaterialAlertDialogBuilder(requireContext())
 //                    .setCancelable(false)
@@ -50,9 +67,10 @@ class MainFragment : Fragment() {
 //                        onUserDelete()
 //                    }
 //                    .show()
-            }
+//            }
         )
     }
+
 
     private var _binding: FragmentMainBinding? = null
 
@@ -71,9 +89,31 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.comicsRecyclerView.adapter = comicsAdapter
+
         viewModel.getCharacterList()
 
         bindVM()
+
+        binding.comicsStatesLayout.setOnRefreshLayoutListener(
+            object : OnRefreshLayoutListener {
+                override fun onRefresh() {
+                    viewModel.selectedCharacterId?.let {
+                        viewModel.loadCharacterComics(it) {
+                            collectCharacterComics()
+                        }
+                    }
+                }
+
+                override fun onRequestPermission() {
+
+                }
+
+                override fun onRefreshFromInternalServerError() {
+
+                }
+            },
+        )
 
     }
 
@@ -82,10 +122,10 @@ class MainFragment : Fragment() {
         with(characterAdapter) {
             swipeRefresh.setOnRefreshListener { characterAdapter.refresh() }
             characterRecyclerView.adapter = withLoadStateHeaderAndFooter(
-                header = PagingLoadStateAdapter(
+                header = PagingLoadStateHorizontalAdapter(
                     this
                 ),
-                footer = PagingLoadStateAdapter(
+                footer = PagingLoadStateHorizontalAdapter(
                     this
                 )
             )
@@ -125,53 +165,67 @@ class MainFragment : Fragment() {
             viewModel.characterComicsFlow.collect {
 
                 Log.v("", "")
-//                when (it) {
-//                    is BaseState.Loading -> {
+                when (it) {
+                    is BaseState.Loading -> {
+                        binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.Waitinglayout)
 //                        progressDialog.showDialog(childFragmentManager)
-//                    }
-//                    is BaseState.LoadingDismiss -> {
+                    }
+                    is BaseState.LoadingDismiss -> {
 //                        ProgressDialog.closeDialog(childFragmentManager)
-//                    }
-//                    is BaseState.InternalServerError -> {
+                    }
+                    is BaseState.InternalServerError -> {
+                        binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.INTERNALSERVERERROR)
 //                        Snackbar.make(
 //                            binding.root,
 //                            it.message ?: getText(R.string.unexpectedErrorHappened),
 //                            Snackbar.LENGTH_LONG
 //                        ).show()
-//                    }
-//                    is BaseState.NoAuthorized -> {
+                    }
+                    is BaseState.NoAuthorized -> {
+                        binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.NopermissionLayout)
 //                        Snackbar.make(
 //                            binding.root,
 //                            getText(R.string.unAuthorized),
 //                            Snackbar.LENGTH_LONG
 //                        ).show()
-//                    }
-//                    is BaseState.NoInternetError -> {
+                    }
+                    is BaseState.NoInternetError -> {
+                        binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.Noconnectionlayout)
 //                        Snackbar.make(
 //                            binding.root,
 //                            getText(R.string.checkYourInternetConnection),
 //                            Snackbar.LENGTH_LONG
 //                        ).show()
-//                    }
-//                    is BaseState.Conflict -> {
+                    }
+                    is BaseState.Conflict -> {
 //                        Snackbar.make(
 //                            binding.root,
 //                            it.message ?: getText(R.string.dataIssue),
 //                            Snackbar.LENGTH_LONG
 //                        ).show()
-//                    }
-//                    is BaseState.NotDataFound -> {
-//
-//                    }
-//                    is BaseState.FeaturedState -> {
+                    }
+                    is BaseState.NotDataFound -> {
+                        binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.Nodatalayout)
+                    }
+                    is BaseState.FeaturedState -> {
+                        if (it is PoJoByIdStateLoadedSuccessfully) {
+
+                            val result = it.data?.data?.results
+                            comicsAdapter.submitList(result)
+                            if (result.isNullOrEmpty()) {
+                                binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.Nodatalayout)
+                            } else {
+                                binding.comicsStatesLayout.FlipLayout(LayoutStatesEnum.SuccessLayout)
+                            }
+                        }
 //                        Snackbar.make(
 //                            binding.root,
 //                            getText(R.string.userHasBeenDeletedSuccessfully),
 //                            Snackbar.LENGTH_LONG
 //                        ).show()
 //                        userAdapter.refresh()
-//                    }
-//                }
+                    }
+                }
 
             }
         }

@@ -25,13 +25,19 @@
         android:id="@+id/comicsStatesLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        app:InternalServerErrorLayout="@layout/states_layout_internal_server_error"
+        app:NoConnectionLayout="@layout/states_layout_no_connection"
+        app:NoDataLayout="@layout/states_layout_no_data"
+        app:RefreshBtnRes="@id/retryBtn"
+        app:WaitingLayout="@layout/states_layout_loading"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/swipeRefresh">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/comicsRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     </com.aljawad.sons.mainlibrary.views.StatesLayoutView>
 

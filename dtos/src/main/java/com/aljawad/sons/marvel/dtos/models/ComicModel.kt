@@ -19,26 +19,25 @@ data class ComicModel(
 
     var format: String?,
     var pageCount: Int?,
-    var textObjects: TextObjectModel?,
+    var textObjects: MutableList<TextObjectModel>?,
     var resourceURI: String?,
     var urls: MutableList<UrlModel>?,
 
-    var series: MutableList<CollectionSummaryModel>?,
-    var variants: MutableList<CollectionSummaryModel>?,
-    var collections: MutableList<CollectionSummaryModel>?,
-    var collectedIssues: MutableList<CollectionSummaryModel>?,
+    var series: ListWrapperModel<CollectionSummaryModel>?,
+//    var variants: MutableList<CollectionSummaryModel>?,
+//    var collections: MutableList<CollectionSummaryModel>?,
+//    var collectedIssues: MutableList<CollectionSummaryModel>?, //TODO untested parts because always I'm receiveing them empty
 
     var dates: MutableList<ComicDateModel>?,
     var prices: MutableList<ComicPriceModel>?,
     var thumbnail: ImageModel?,
     var images: MutableList<ImageModel>?,
 
-    var creators: MutableList<ListWrapperModel<CollectionSummaryModel>>?,
+    var creators: ListWrapperModel<CollectionSummaryModel>?,
 
-
-    var characters: MutableList<CollectionSummaryModel>?,
-    var stories: MutableList<CollectionSummaryModel>?,
-    var events: MutableList<CollectionSummaryModel>?
+    var characters: ListWrapperModel<CollectionSummaryModel>?,
+    var stories: ListWrapperModel<CollectionSummaryModel>?,
+    var events: ListWrapperModel<CollectionSummaryModel>?,
 ) {
     companion object {
         var diffUtil: DiffUtil.ItemCallback<ComicModel> =
@@ -60,4 +59,6 @@ data class ComicModel(
             }
     }
 
+
+    fun details(): String = textObjects?.joinToString(separator = "\n") { it.text ?: "" } ?: ""
 }
