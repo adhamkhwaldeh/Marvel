@@ -45,14 +45,13 @@ This module is on the bottom layer of the project. Dealing with repository $ Dat
 
 
 
-## goRestCore (Main Functionality of app Resides Here)
+## marvelCore (Main Functionality of app Resides Here)
 In this module we are presenting the applications main functionality where we are showcasing the list of users , create and delete users. This module have dependency on business, common, dtos
 ###### Purpose
-1. Display user list
-2. Create user
-3. Home screen
+1. Load character list
+2. Load related comics
 
-## goRestRepository
+## marvelRepository
 This module contains Users Repo layer to fetch data from any source either remote or local dat source based on network availability
 ###### Purpose
 1. populating business module
